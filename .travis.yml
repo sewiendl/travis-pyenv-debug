@@ -4,6 +4,7 @@ env:
   global:
     - PATH=$PATH:$HOME/.local/bin
 install:
+  - pip install --user pipenv
   - unset PYENV_ROOT
   - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
   - export PATH="$HOME/.pyenv/bin:$PATH"
