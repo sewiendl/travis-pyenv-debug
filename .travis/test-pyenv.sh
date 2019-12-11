@@ -15,6 +15,7 @@ python3 --version
 pyenv virtualenv -p python3.7 3.7.1 travis_venv
 pyenv virtualenvs
 pipenv install
+pipenv shell
 pipenv --where
 pipenv --venv
 pipenv --py
