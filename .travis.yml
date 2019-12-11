@@ -1,0 +1,14 @@
+language: generic
+dist: bionic
+env:
+  global:
+    - PATH=$PATH:$HOME/.local/bin
+install:
+  - unset PYENV_ROOT
+  - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+  - export PATH="$HOME/.pyenv/bin:$PATH"
+  - pyenv install 3.7.1
+jobs:
+  include:
+    - stage: Test
+      script: ./.travis/test-pyenv.sh
